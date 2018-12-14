@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>CanteenApp</title>
+</head>
+<body>
+	List Makanan
+	<br>
+	<table>
+		<thead>
+			<th>No.</th>
+			<th>Nama Makanan</th>
+			<th>Harga</th>
+		</thead>
+		<tbody>
+			<tr th:each="makanan : ${listMakanan}">
+				<td th:text="${makanan.nama}"/>
+				<td th:text="${makanan.harga}"/>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>
